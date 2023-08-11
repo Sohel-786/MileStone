@@ -49,15 +49,16 @@ function handleBlogList(){
     
     blogs_data = blogs_data.map( (el) => {
 
-        return `<div><div><img src=${el.url}/></div><h1>${el.title}</h1><p>${el.desc}</p><button>Read</button></div>`
+        return `<div><img src=${el.url}/></div><h1>${el.title}</h1><p>${el.desc}</p><button>Read</button>`
     });
-
-    // console.log(blogs_data);
 
     let container = document.querySelector('#container');
 
     blogs_data.forEach(el => {
-        container.innerHTML = el;
+        let div = document.createElement('div');
+        div.innerHTML = el;
+
+        container.append(div);
     });
 
 }
