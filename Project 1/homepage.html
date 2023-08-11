@@ -21,13 +21,13 @@
                 <div>
                     <h1>&times;</h1>
                 </div>
-                <form>
-                    <input type="text" placeholder="Enter Blog Post URL:">
-                    <input type="text" placeholder="Enter Blog Title:">
-                    <input type="text" placeholder="Enter Blog Description:">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Write.."></textarea>
+                <form onsubmit="handleBlog()">
+                    <input type="text" id="url" placeholder="Enter Blog Post URL:" required>
+                    <input type="text" id="title" placeholder="Enter Blog Title:" required>
+                    <input type="text" id="desc" placeholder="Enter Blog Description:" required>
+                    <textarea id="blog" cols="30" rows="10" placeholder="Write.." required></textarea>
+                    <button type="submit">Add Blog</button>
                 </form>
-                <button onclick="">Add Blog</button>
             </div>
         </section>
 
