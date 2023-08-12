@@ -15,11 +15,11 @@ let blogs_data = localStorage.getItem('All_Blogs');
     } 
 
 
-let container = document.getElementById('container');
+let Blogcontainer = document.getElementById('Blogcontainer');
 
-container.innerHTML = null;
+Blogcontainer.innerHTML = null;
 
-container.innerHTML = `<div><div><h1>${data.title}</h1><p>${data.desc}</p></div><div><img src=${data.url} alt="blogImg"></div></div><div><p>${data.blog}</p></div>`
+Blogcontainer.innerHTML = `<div><div><h2>${data.title}</h2><p>${data.desc}</p></div><div><img src=${data.url} alt="blogImg"></div></div><div><p>${data.blog}</p></div>`
 
 function backTohome(){
     window.location.href = './homepage.html';
