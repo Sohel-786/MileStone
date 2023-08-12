@@ -49,7 +49,7 @@ function handleBlogList(){
     
     blogs_data = blogs_data.map( (el) => {
 
-        return `<div><img src=${el.url}/></div><h1>${el.title}</h1><p>${el.desc}</p><button>Read</button>`
+        return `<div><img src=${el.url}/></div><h3>${el.title}</h3><p>${el.desc}</p><button>Read</button>`
     });
 
     let container = document.querySelector('#container');
