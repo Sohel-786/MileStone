@@ -23,10 +23,15 @@
                 <p class="close">&times;</p>
             </div>
             <form onsubmit="handleBlog()">
+
                 <input type="text" id="url" placeholder="Enter Blog Post URL:" required>
-                <input type="text" id="title" placeholder="Enter Blog Title:" required maxlength="50">
+
+                <input type="text" id="title" placeholder="Enter Blog Title:" required maxlength="80">
+
                 <input type="text" id="desc" placeholder="Enter Blog Description:" required>
+
                 <textarea id="blog" cols="30" rows="10" placeholder="Write.." required></textarea>
+
                 <button type="submit">Add Blog</button>
             </form>
         </div>

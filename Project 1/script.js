@@ -11,10 +11,6 @@ function handleBlog(){
             this.desc = desc;
             this.blog = blog;
         }
-
-        getshortTitle() {
-             return (this.title).slice(0,50);
-        }
     }
 
     let blog = new Blog(
@@ -53,9 +49,10 @@ function handleBlogList(){
     
     blogs_data = blogs_data.map( (el) => {
         
-        el.getshortTitle();
+        let title =   (el.title).slice(0,50);
+        let desc = (el.desc).slice(0,70);
 
-        return `<div><img src=${el.url}/></div><h3>${el.title}</h3><p>${el.desc}</p><button>Read</button>`
+        return `<div><img src=${el.url}/></div><h3>${title}</h3><p>${desc}</p><button>Read</button>`
     });
 
     let container = document.querySelector('#container');
