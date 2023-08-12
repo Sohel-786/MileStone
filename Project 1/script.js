@@ -85,19 +85,6 @@ function closeInputSection(){
 let data;
 
 function showBlog(e) {
-    let blogs_data = localStorage.getItem('All_Blogs');
-
-    if(!blogs_data){
-        return;
-    }
-
-    blogs_data = JSON.parse(blogs_data);
-
-    data = blogs_data[e.target.id];
-
-    if(!data){
-        return;
-    } 
-
-    window.location.href = './blogpage.html';
+    
+    window.location.href = `./blogpage.html?${e.target.id}`;
 }
