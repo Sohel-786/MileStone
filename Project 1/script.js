@@ -47,12 +47,12 @@ function handleBlogList(){
 
     blogs_data = JSON.parse(blogs_data);
     
-    blogs_data = blogs_data.map( (el) => {
+    blogs_data = blogs_data.map( (el, i) => {
         
         let title =   (el.title).slice(0,50);
         let desc = (el.desc).slice(0,70);
 
-        return `<div><img src=${el.url}/></div><h3>${title}</h3><p>${desc}</p><button>Read</button>`
+        return `<div><img src=${el.url}/></div><h3>${title}</h3><p>${desc}</p><button id=${i} onclick='showBlog(event)'>Read</button>`
     });
 
     let container = document.querySelector('#container');
@@ -80,4 +80,24 @@ function closeInputSection(){
     let inputSection = document.getElementById('input-section');
 
     inputSection.setAttribute('style','display:none'); 
+}
+
+let data;
+
+function showBlog(e) {
+    let blogs_data = localStorage.getItem('All_Blogs');
+
+    if(!blogs_data){
+        return;
+    }
+
+    blogs_data = JSON.parse(blogs_data);
+
+    data = blogs_data[e.target.id];
+
+    if(!data){
+        return;
+    } 
+
+    window.location.href = './blogpage.html';
 }

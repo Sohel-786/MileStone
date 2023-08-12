@@ -126,6 +126,7 @@ form button:hover, form button:focus{
 
 #container {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 40px 50px; 
 }
