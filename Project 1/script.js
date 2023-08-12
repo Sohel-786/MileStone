@@ -57,8 +57,9 @@ function handleBlogList(){
     blogs_data.forEach(el => {
         let div = document.createElement('div');
         div.innerHTML = el;
+        div.setAttribute('class', 'card');
 
-        container.append(div);
+        container.appendChild(div);
     });
 
 }

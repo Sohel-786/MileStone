@@ -115,3 +115,15 @@ form button:hover, form button:focus{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: all 0.3s;
 }
+
+.card{
+    width: 250px;
+    height: 380px;
+    border: 1px solid black;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    padding: 40px 30px; 
+}
