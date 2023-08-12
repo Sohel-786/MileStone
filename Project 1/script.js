@@ -11,6 +11,10 @@ function handleBlog(){
             this.desc = desc;
             this.blog = blog;
         }
+
+        getshortTitle() {
+             return (this.title).slice(0,50);
+        }
     }
 
     let blog = new Blog(
@@ -48,6 +52,8 @@ function handleBlogList(){
     blogs_data = JSON.parse(blogs_data);
     
     blogs_data = blogs_data.map( (el) => {
+        
+        el.getshortTitle();
 
         return `<div><img src=${el.url}/></div><h3>${el.title}</h3><p>${el.desc}</p><button>Read</button>`
     });

@@ -143,6 +143,7 @@ form button:hover, form button:focus{
 
 .card h3 {
     margin: 15px 0px;
+    font-size: 17px;
 }
 
 .card p{
@@ -161,3 +162,8 @@ form button:hover, form button:focus{
     cursor: pointer;
 }
 
+.card button:hover{
+    background-color: #efefef;
+    color: red;
+    border: 1px solid red;
+}
