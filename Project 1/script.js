@@ -64,3 +64,16 @@ function handleBlogList(){
 }
 
 handleBlogList();
+
+function handleNewBlog(){
+    let inputSection = document.getElementById('input-section');
+
+    inputSection.setAttribute('style','display:flex');
+}
+
+
+function closeInputSection(){
+    let inputSection = document.getElementById('input-section');
+
+    inputSection.setAttribute('style','display:none'); 
+}

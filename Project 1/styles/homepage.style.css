@@ -24,14 +24,14 @@ header>div:nth-child(1) {
     gap: 10px;
 } 
 
-header>div:nth-child(2) {
+header>div:nth-child(2), .close {
     padding: 0px 8px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 35px;
 }
 
-header>div:nth-child(2):hover{
+header>div:nth-child(2):hover, .close:hover{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     transition: all 0.4s;
 }
@@ -39,7 +39,7 @@ header>div:nth-child(2):hover{
 #input-section{
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -55,8 +55,8 @@ header>div:nth-child(2):hover{
     width: 500px;
     border-radius: 20px;
     padding: 40px;
-    background-color: rgb(240, 240, 255);
-
+    background-color: #f0f0ff;
+    padding-top: 10px;
 }
 
 #input-section>div form{
@@ -72,6 +72,10 @@ form input, textarea {
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
+textarea{
+    resize: none;
+}
+
 input::placeholder, textarea::placeholder {
     color: #8c8c8c;
 }
@@ -81,11 +85,33 @@ form button{
     color: rgb(220, 220, 220);
     border-radius: 10px;
     padding: 10px;
-    border: 1px solid transparent;
+    border: 1.6px solid transparent;
     cursor: pointer;
+}
+
+#input-section>div>div:nth-child(1){
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .close {
     color: #691ded;
-    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    width: fit-content;
+    right: -396px;
+}
+
+.close:hover{
+    background-color: #ff0000bb;
+    color :white;
+}
+
+
+form button:hover, form button:focus{
+    background: linear-gradient(#691ded, #b74eca);
+    color: white;
+    border: 1.6px solid white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: all 0.3s;
 }
