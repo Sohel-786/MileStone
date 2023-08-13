@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { nanoid } from 'nanoid';
 
 function TodoInput({handleTodos}){
 
@@ -9,7 +10,7 @@ function TodoInput({handleTodos}){
     }
 
     function handleTodo(){
-        let data = { title : text, status : false, remove : false};
+        let data = { title : text, status : false, remove : false, id : nanoid()};
         handleTodos(data);
         setText('')
     }
