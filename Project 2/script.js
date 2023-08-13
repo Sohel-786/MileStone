@@ -1,24 +1,33 @@
-function search_movie(){
-    let name = document.querySelector('#name').value;
-    if(name == ""){
-        alert('please Enter a movie name first');
+function search_movie(e){
+
+    if(e.key === 'Enter'){
+        
+        let name = document.querySelector('#name').value;
+        if(name == ""){
+            alert('please Enter a movie name first');
+        }
+        else{
+            show_movie(name);
+         }
     }
-    else{
-        show_movie();
-     }
 }
 
 
-async function show_movie(){
-    let name = document.querySelector('#name').value;
+async function show_movie(name){
+
 try{
     let response = await fetch(`http://www.omdbapi.com/?s=${name}&apikey=611293cc`);
     response = await response.json();
-    console.log(response)
-    append_movie(response);
+    console.log(response);
+    if(!response.status){
+        alert('no movie found');
+    }else{
+
+        append_movie(response);
+    }
     
 }catch(err){
-    console.log(err);
+        console.log(err);
     }
    
 }
@@ -33,19 +42,19 @@ function append_movie(el){
             let div = document.createElement('div');
             div.setAttribute('class', 'box');
 
-            let img = document.createElement('img');
-            img.src = el.Poster;
-
-            let h1 = document.createElement('h1');
-            h1.innerHTML = el.Title;
+            let div2 = document.createElement('div');
+            
+            // let img = document.createElement('img');
+            // img.src = el.Poster;
+            div2.setAttribute('style',`background-image: url(${el.Poster});`);
 
             let p = document.createElement('p');
-            p.innerHTML = 'IMDB Ratings ' + el.imdbRating;
+            p.innerHTML = el.Title;
             
-            let p2 = document.createElement('p');
-            p2.innerHTML = 'Year' + `\n` + el.Year; 
+            let btn = document.createElement('button');
+            btn.innerHTML = 'Watch Now'; 
 
-            div.append(img,h1,p,p2);
+            div.append(div2,p,btn);
             container.append(div);
         });
 }

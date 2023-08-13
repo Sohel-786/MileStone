@@ -9,13 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>Movies</h1>
+        <h1>Movie List</h1>
     </header>
     <main>
         <section class="search_section">
-            <input type="text" placeholder="Enter Movie Name" id="name">
-            <hr>
-            <button onclick="search_movie()">Search</button>
+            <input onkeypress="search_movie(event)" type="text" placeholder="Enter Movie Name" id="name">
         </section>
 
         <section class="container">
