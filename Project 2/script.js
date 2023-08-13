@@ -16,14 +16,16 @@ function search_movie(e){
 async function show_movie(name){
 
 try{
+    
     let response = await fetch(`http://www.omdbapi.com/?s=${name}&apikey=611293cc`);
     response = await response.json();
-    console.log(response);
+
+    let container = document.querySelector('.container');
 
     if(response.Response === 'False'){
-        append_error();
+        append_error(container);
     }else{
-        append_movie(response);
+        append_movie(response, container);
     }
     
 }catch(err){
@@ -32,9 +34,8 @@ try{
    
 }
 
-function append_movie(el){
-    let container = document.querySelector('.container');
-
+function append_movie(el, container){
+    
     container.innerHTML = null;
 
         (el.Search).forEach((el) => {
@@ -43,9 +44,6 @@ function append_movie(el){
             div.setAttribute('class', 'box');
 
             let div2 = document.createElement('div');
-            
-            // let img = document.createElement('img');
-            // img.src = el.Poster;
             div2.setAttribute('style',`background-image: url(${el.Poster});`);
 
             let p = document.createElement('p');
@@ -60,9 +58,7 @@ function append_movie(el){
 }
 
 
-function append_error(){
-    let container = document.querySelector('.container');
-
+function append_error(container){
     container.innerHTML = null;
 
     container.innerHTML = '<div class="error"><h1>Opps, Movie not found!</h1></div>';
