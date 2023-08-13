@@ -19,10 +19,10 @@ try{
     let response = await fetch(`http://www.omdbapi.com/?s=${name}&apikey=611293cc`);
     response = await response.json();
     console.log(response);
-    if(!response.status){
-        alert('no movie found');
-    }else{
 
+    if(response.Response === 'False'){
+        append_error();
+    }else{
         append_movie(response);
     }
     
@@ -57,4 +57,13 @@ function append_movie(el){
             div.append(div2,p,btn);
             container.append(div);
         });
+}
+
+
+function append_error(){
+    let container = document.querySelector('.container');
+
+    container.innerHTML = null;
+
+    container.innerHTML = '<div class="error"><h1>Opps, Movie not found!</h1></div>';
 }
