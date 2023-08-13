@@ -1,13 +1,22 @@
+import { useState } from 'react'
 import './App.css'
+import TodoInput from './components/TodoInput'
 
 function App() {
+
+  const [todoList, setTodoList] = useState([]);
+
+  function handleTodos(data){
+      setTodoList([...todoList, data]);
+  }
+
   return (
-    <div>
-        <div>
-          <input type="text" placeholder='Enter Todo'/>
-          <button>Add</button>
-        </div>
-    </div>
+    <>
+    <TodoInput  handleTodos={handleTodos} />
+      <div>
+          
+      </div>
+    </>
   )
 }
 
