@@ -38,6 +38,14 @@
     cursor: pointer;
 }
 
-.card>div button:hover{
+.card>div button:nth-child(1):hover{
     border: 1px solid white;
+    background-color: #005525;
+    transition: all 0.3s;
+}
+
+.card>div button:nth-child(2):hover{
+    border: 1px solid white;
+    background-color: #550017;
+    transition: all 0.3s;
 }

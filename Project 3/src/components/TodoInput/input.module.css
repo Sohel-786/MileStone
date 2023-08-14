@@ -35,7 +35,9 @@
 }
 
 .inputBox button:hover{
-    border: 2px solid rgb(0, 255, 123);
-    background-color: #ad54c6;
+    border: 2px solid rgb(255, 170, 0);
+    color: black;
+    background-color: #6fff00;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: all 0.3s;
 }
