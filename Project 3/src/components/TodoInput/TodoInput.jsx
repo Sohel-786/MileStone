@@ -11,9 +11,13 @@ function TodoInput({handleTodos}){
     }
 
     function handleTodo(){
-        let data = { title : text, status : false, remove : false, id : nanoid()};
-        handleTodos(data);
-        setText('')
+        if((text.trim()).length !== 0){
+            let data = { title : text, status : false, remove : false, id : nanoid()};
+            handleTodos(data);
+            setText('')
+        }else{
+            alert('Please Enter Todo First')
+        }
     }
 
     return(
