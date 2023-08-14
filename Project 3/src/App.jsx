@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <TodoInput  handleTodos={handleTodos} />
-      <div>
+      <div className='todoList'>
           <TodoList list={todoList} fn1={handleStatus} fn2={handleRemoval} />
       </div>
     </>
