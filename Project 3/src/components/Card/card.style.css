@@ -1,0 +1,42 @@
+.card{
+    width: 255px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #282f41;
+    color: white;
+    padding: 22px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Oswald:wght@300;400&family=Poppins&family=Roboto+Condensed:wght@300&display=swap');
+
+.card h3{
+    font-size: 16px;
+}
+
+.card p{
+    margin-top: 38px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.card>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.card>div button{
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    background-color: #3628b4;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.card>div button:hover{
+    border: 1px solid white;
+}
