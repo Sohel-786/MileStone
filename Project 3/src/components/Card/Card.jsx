@@ -1,4 +1,5 @@
 import styles from './card.module.css'
+import { memo } from 'react'
 
 function Card({todo, i, Ustatus, remove}){
 
@@ -15,4 +16,4 @@ function Card({todo, i, Ustatus, remove}){
         </div>
     )
 }
-export default Card;
+export default memo(Card);

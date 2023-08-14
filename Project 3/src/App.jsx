@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import style from './App.module.css'
 import TodoInput from './components/TodoInput/TodoInput'
 import TodoList from './components/TodoList';
@@ -7,7 +7,7 @@ function App() {
 
   const [todoList, setTodoList] = useState([]);
 
-  function handleTodos(data){
+  function handleTodos (data){
       setTodoList([...todoList, data]);
   }
 

@@ -34,8 +34,8 @@
     cursor: pointer;
 }
 
-.inputBox button:hover{
-    border: 2px solid rgb(255, 170, 0);
+.inputBox button:hover, .inputBox button:focus{
+    border: 2px solid black;
     color: black;
     background-color: #6fff00;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
