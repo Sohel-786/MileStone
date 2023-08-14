@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import style from './App.module.css'
 import TodoInput from './components/TodoInput/TodoInput'
 import TodoList from './components/TodoList';
 
@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <TodoInput  handleTodos={handleTodos} />
-      <div className='todoList'>
+      <div className={style['todoList']}>
           <TodoList list={todoList} fn1={handleStatus} fn2={handleRemoval} />
       </div>
     </>

@@ -1,9 +1,9 @@
-import './card.style.css';
+import styles from './card.module.css'
 
 function Card({todo, i, Ustatus, remove}){
 
     return(
-        <div className='card'>
+        <div className={styles['card']}>
             <h3>{i}. {todo.title}</h3>
 
             <p>Status: {todo.status ? 'Completed' : 'Pending'}</p>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Oswald:wght@300;400&family=Poppins&family=Roboto+Condensed:wght@300&display=swap');
+
 .card{
     width: 265px;
     height: 200px;
@@ -8,7 +10,6 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Oswald:wght@300;400&family=Poppins&family=Roboto+Condensed:wght@300&display=swap');
 
 .card h3{
     font-size: 16px;

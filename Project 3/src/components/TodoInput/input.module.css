@@ -1,3 +1,10 @@
+.InputContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .inputBox{
     display: flex;
     justify-content: center;
@@ -6,6 +13,8 @@
     border-radius: 10px;
     background-color: white;
     border-radius: 10px;
+    width: fit-content;
+    margin-top: 20px;
 }
 
 .inputBox input {

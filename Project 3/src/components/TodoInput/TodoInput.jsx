@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { nanoid } from 'nanoid';
-import './input.style.css';
+import style from './input.module.css';
 
 function TodoInput({handleTodos}){
 
@@ -17,10 +17,12 @@ function TodoInput({handleTodos}){
     }
 
     return(
-            <div className="inputBox">
+        <div className={style['InputContainer']}>
+            <div className={style["inputBox"]}>
                 <input value={text} onChange={handleChange} type="text" placeholder="Enter Todo"/>
                 <button onClick={handleTodo}>Add</button>
             </div>
+        </div>
     )
 }
 

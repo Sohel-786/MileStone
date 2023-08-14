@@ -1,0 +1,16 @@
+.todoList { 
+    display: flex;
+    min-height: 75vh;
+    padding: 40px 70px;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+body {
+    background: linear-gradient(#621d75, #2d0c36);
+}
+
+#root {
+    display: flex;
+    align-items: center;
+}
