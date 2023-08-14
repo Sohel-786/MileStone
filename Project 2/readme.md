@@ -1,6 +1,6 @@
 # Movie Search App
 
-#### Home
+#### Home Page
 
 ![Home](public/githubReadme/homepage.png)
 

@@ -2,7 +2,7 @@
 
 ### Create Your Todo
 
-#### Home
+#### Home Page
 
 ![Home](public/githubReadme/homepage.png)
 
