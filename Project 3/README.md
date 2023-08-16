@@ -17,5 +17,5 @@
 
 > The Todos created by user will be stored in db.json file, only start the json-server first - command 
 
-> json-server --watch --port 3001 db.json  `#RRGGBB`
+> json-server --watch --port 3001 db.json
 
