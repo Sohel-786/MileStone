@@ -45,9 +45,7 @@ function App() {
 
       (data[0].status) ? data[0].status = false : data[0].status = true;
 
-      console.log(data);
-
-      setTodosByid(data[0].id, data[0]);
+      updateTodoByid(data[0].id, data[0]);
 
   }
 
@@ -66,11 +64,7 @@ function App() {
 
     let data = await getTodoByid(uid);
 
-      data[0].remove = true;
-
-      console.log(data);
-
-      setTodosByid(data[0].id, data[0]);
+    deleteTodosByid(data[0].id);
 
   }
 
@@ -99,7 +93,7 @@ function App() {
   }
 
 
-  function setTodosByid(id, data){
+  function updateTodoByid(id, data){
     fetch(`http://localhost:3001/todos/${id}`, {
       method : 'PATCH',
       body : JSON.stringify(data),
@@ -108,6 +102,14 @@ function App() {
       }
     }).then(() =>{
       console.log('update Done');
+    })
+  }
+
+  function deleteTodosByid(id){
+    fetch(`http://localhost:3001/todos/${id}`, {
+      method : 'DELETE'
+    }).then(() =>{
+      console.log('Deleted');
     })
   }
 
