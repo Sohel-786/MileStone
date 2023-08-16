@@ -1,5 +1,4 @@
 import styles from './card.module.css'
-import { memo } from 'react'
 
 function Card({todo, i, Ustatus, remove}){
 
@@ -10,10 +9,10 @@ function Card({todo, i, Ustatus, remove}){
             <p>Status: {todo.status ? 'Completed' : 'Pending'}</p>
 
             <div>
-                <button onClick={() => {Ustatus(todo.id) }}>Update Status</button>
-                <button onClick={() => {remove(todo.id) }}>Remove</button>
+                <button onClick={() => {Ustatus(todo.uid) }}>Update Status</button>
+                <button onClick={() => {remove(todo.uid) }}>Remove</button>
             </div>
         </div>
     )
 }
-export default memo(Card);
+export default Card;

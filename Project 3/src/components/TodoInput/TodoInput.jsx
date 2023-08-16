@@ -12,7 +12,7 @@ function TodoInput({handleTodos}){
 
     function handleTodo(){
         if((text.trim()).length !== 0){
-            let data = { title : text, status : false, remove : false, id : nanoid()};
+            let data = { title : text, status : false, remove : false, uid : nanoid()};
             handleTodos(data);
             setText('')
         }else{

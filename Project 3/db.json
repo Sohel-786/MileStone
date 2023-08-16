@@ -1,0 +1,18 @@
+{
+  "todos": [
+    {
+      "title": "Learn Vue",
+      "status": false,
+      "remove": false,
+      "uid": "2gImg7Yb4l4j9hHfiYiwB",
+      "id": 1
+    },
+    {
+      "title": "Learn React",
+      "status": false,
+      "remove": false,
+      "uid": "H1ALG9UyQ5hZ8JnmARHto",
+      "id": 2
+    }
+  ]
+}
