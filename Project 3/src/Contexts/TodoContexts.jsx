@@ -13,7 +13,6 @@ export const TodoContext = createContext({
                                         page : Number,
                                         handlePageDecrease : ()=>{},
                                         handlePageIncrease : () =>{},
-                                        total : Number,
                                         limit : Number,
                                         });
 
@@ -24,10 +23,9 @@ export function TodocontextProvider({children}){
     const [todoList, setTodoList] = useState([]);
     const [ demo , setDemo ] = useState(true);
     const [ page , setPage ] = useState(1);
-    const [ total, setTotal ] = useState(0);
     const [ limit, setLimit ] = useState(0); 
 
-    function handleTotal(){
+    function handleTotal(total){
         if(total%6 == 0){
             setLimit(0);
             console.log(total, limit)
@@ -51,8 +49,7 @@ export function TodocontextProvider({children}){
             }
           });
 
-          setTotal(data.headers['x-total-count']);
-          handleTotal()
+          handleTotal(data.headers['x-total-count'])
           setTodoList(data.data);
     
         }catch(err){
@@ -126,5 +123,5 @@ export function TodocontextProvider({children}){
       }
     
 
-    return <TodoContext.Provider value={{todoList, getTodos, handleTodos, handleStatus,handleRemoval, getTodoByid, demo, page, handlePageDecrease, handlePageIncrease, total}}>{children}</TodoContext.Provider>
+    return <TodoContext.Provider value={{todoList, getTodos, handleTodos, handleStatus,handleRemoval, getTodoByid, demo, page, handlePageDecrease, handlePageIncrease, limit}}>{children}</TodoContext.Provider>
 }
