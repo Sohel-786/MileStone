@@ -26,16 +26,18 @@ export function TodocontextProvider({children}){
     const [ limit, setLimit ] = useState(0); 
 
     function handleTotal(total){
-        if(total%6 == 0){
+        if(total%6 === 0){
             setLimit(0);
             console.log(total, limit)
+        }else{
+          setLimit(1);
         }
     }
 
     function handlePageIncrease(){
       setPage(page + 1);
     }
-
+    
     function handlePageDecrease(){
       setPage(page - 1);
     }
@@ -51,6 +53,9 @@ export function TodocontextProvider({children}){
 
           handleTotal(data.headers['x-total-count'])
           setTodoList(data.data);
+          if(data.data.length === 0){
+            setPage( page - 1);
+          }
     
         }catch(err){
           console.log(err.message)
