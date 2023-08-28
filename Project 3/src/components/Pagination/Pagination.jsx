@@ -4,7 +4,7 @@ import './pagination.css'
 
 function Pagination(){
 
-    const { handlePageDecrease, handlePageIncrease, page, total, todoList, limit } = useContext(TodoContext);
+    const { handlePageDecrease, handlePageIncrease, page, todoList, limit } = useContext(TodoContext);
 
     return(
     

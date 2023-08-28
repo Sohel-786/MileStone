@@ -1,5 +1,4 @@
 import { createContext, useState } from "react"
-import { setTodos, updateTodoByid, deleteTodosByid } from "../utils/Todo_CRUD/TodoCRUD"; 
 import { TodosInstance } from "../AxiosInstance/TodosInstance";
 
 export const TodoContext = createContext({
@@ -63,10 +62,9 @@ export function TodocontextProvider({children}){
     
     }
 
-    function handleTodos (data){
+   async function handleTodos (data){
         
-        setTodos(data);
-        setTodoList([...todoList, data]);
+        await TodosInstance.post('/', data);
         setDemo(!demo);
     
     }
@@ -77,15 +75,14 @@ export function TodocontextProvider({children}){
         
         (data[0].status) ? data[0].status = false : data[0].status = true;
         
-        updateTodoByid(data[0].id, data[0]);
+        await TodosInstance.patch(`/${data[0].id}`, data[0])
+
 
         let updatedList = todoList.map((el) =>
            (el.uid === uid) ? {...el , status : !el.status} : el
      
         );
-       
-        setTodoList(updatedList);
-
+      
         setDemo(!demo);
      }
 
@@ -93,7 +90,8 @@ export function TodocontextProvider({children}){
          
         let data = await getTodoByid(uid);
          
-        deleteTodosByid(data[0].id);
+        await TodosInstance.delete(`/${data[0].id}`);
+
 
         let updatedList = todoList.filter((el) =>
           {
@@ -104,8 +102,6 @@ export function TodocontextProvider({children}){
         
         );
       
-        setTodoList(updatedList);
-
         setDemo(!demo);
       
       }
