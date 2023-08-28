@@ -2,14 +2,14 @@
   "todos": [
     {
       "title": "Learn React",
-      "status": false,
+      "status": true,
       "remove": false,
       "uid": "H1ALG9UyQ5hZ8JnmARHto",
       "id": 2
     },
     {
       "title": "Create Amazing Projects",
-      "status": true,
+      "status": false,
       "remove": false,
       "uid": "k_f1g01s0UH_1W9sIWOEk",
       "id": 4
@@ -36,25 +36,11 @@
       "id": 7
     },
     {
-      "title": "Learn HTML",
+      "title": "Learn NextJs",
       "status": false,
       "remove": false,
-      "uid": "PHs-iSJqjhQBvlMcDsRMT",
+      "uid": "G1Be0u4b8vc0ghV-JxkF5",
       "id": 8
-    },
-    {
-      "title": "Learn Next",
-      "status": true,
-      "remove": false,
-      "uid": "YhzNfJWNWxqd7_ROLVYSA",
-      "id": 9
-    },
-    {
-      "title": "Learn Advanced Backend",
-      "status": false,
-      "remove": false,
-      "uid": "wOem2IcFaLH34rcZ9be9T",
-      "id": 10
     }
   ]
 }
