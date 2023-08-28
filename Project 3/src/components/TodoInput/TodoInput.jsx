@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { nanoid } from 'nanoid';
 import style from './input.module.css';
+import { TodoContext } from "../../Contexts/TodoContexts";
 
-function TodoInput({handleTodos}){
+
+function TodoInput(){
 
     const [text, setText] = useState('');
+    const { handleTodos } = useContext(TodoContext)
 
     function handleChange(e){
         setText(e.target.value);

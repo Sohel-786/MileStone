@@ -2,17 +2,10 @@
   "todos": [
     {
       "title": "Learn React",
-      "status": false,
+      "status": true,
       "remove": false,
       "uid": "H1ALG9UyQ5hZ8JnmARHto",
       "id": 2
-    },
-    {
-      "title": "Learn Vue",
-      "status": false,
-      "remove": false,
-      "uid": "3TJZF8PU5aF5i6PgIW666",
-      "id": 3
     },
     {
       "title": "Create Amazing Projects",
@@ -20,6 +13,34 @@
       "remove": false,
       "uid": "k_f1g01s0UH_1W9sIWOEk",
       "id": 4
+    },
+    {
+      "title": "Learn Type Script",
+      "status": false,
+      "remove": false,
+      "uid": "SQpmJWNDrQnAv2AYFJV7N",
+      "id": 5
+    },
+    {
+      "title": "Learn Tailwind",
+      "status": false,
+      "remove": false,
+      "uid": "PWTlDu8QfEhDyLjucR05X",
+      "id": 6
+    },
+    {
+      "title": "Learn Vue",
+      "status": false,
+      "remove": false,
+      "uid": "3lUZ2lyF6QWO8Mw7ITLwd",
+      "id": 7
+    },
+    {
+      "title": "Learn HTML",
+      "status": false,
+      "remove": false,
+      "uid": "PHs-iSJqjhQBvlMcDsRMT",
+      "id": 8
     }
   ]
 }

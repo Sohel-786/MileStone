@@ -1,7 +1,11 @@
+import { useContext } from 'react'
 import styles from './card.module.css'
+import { TodoContext } from '../../Contexts/TodoContexts'
 
-function Card({todo, i, Ustatus, remove}){
-
+function Card({todo, i}){
+    
+    const { handleStatus, handleRemoval } = useContext(TodoContext);
+    
     return(
         <div className={styles['card']}>
             <h3>{i}. {todo.title}</h3>
@@ -9,8 +13,8 @@ function Card({todo, i, Ustatus, remove}){
             <p>Status: {todo.status ? 'Completed' : 'Pending'}</p>
 
             <div>
-                <button onClick={() => {Ustatus(todo.uid) }}>Update Status</button>
-                <button onClick={() => {remove(todo.uid) }}>Remove</button>
+                <button onClick={() => {handleStatus(todo.uid) }}>Update Status</button>
+                <button onClick={() => {handleRemoval(todo.uid) }}>Remove</button>
             </div>
         </div>
     )

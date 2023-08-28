@@ -1,11 +1,15 @@
+import { useContext } from 'react';
 import Card from './Card/Card';
+import { TodoContext } from '../Contexts/TodoContexts';
 
-function TodoList({list, fn1, fn2}){
+function TodoList(){
+
+    const { todoList } = useContext(TodoContext);
 
     return(
         <>
-            {list.map((el, i) =>{
-               return <Card key={el.uid} todo={el} i={i + 1} Ustatus={fn1} remove={fn2}/>
+            {todoList && todoList.map((el, i) =>{
+               return <Card key={el.uid} todo={el} i={i + 1}/>
             })}
         </>
     )
