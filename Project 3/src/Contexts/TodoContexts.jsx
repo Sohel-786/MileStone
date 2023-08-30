@@ -41,8 +41,6 @@ export function TodocontextProvider({children}){
             }
           });
 
-          console.log(data.headers['x-total-count'])
-
           setTodoContextvalues({...todoContextvalues, 
                                    todoList : data.data, 
                                    page : data.data.length === 0 ? todoContextvalues.page - 1 : todoContextvalues.page,

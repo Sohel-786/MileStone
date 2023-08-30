@@ -7,7 +7,7 @@ import Pagination from './components/Pagination/Pagination';
 
 function App() {
   
-  const { getTodos, todoContextvalues } = useContext(TodoContext)
+  const { getTodos, todoContextvalues } = useContext(TodoContext);
 
   
   useEffect(()=>{

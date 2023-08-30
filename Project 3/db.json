@@ -2,7 +2,7 @@
   "todos": [
     {
       "title": "Learn React",
-      "status": true,
+      "status": false,
       "remove": false,
       "uid": "H1ALG9UyQ5hZ8JnmARHto",
       "id": 2
@@ -30,23 +30,23 @@
     },
     {
       "title": "Learn Vue",
-      "status": true,
+      "status": false,
       "remove": false,
       "uid": "3lUZ2lyF6QWO8Mw7ITLwd",
       "id": 7
     },
     {
       "title": "Learn HTML,CSS",
-      "status": false,
+      "status": true,
       "remove": false,
       "uid": "owNjSEnWeIUlOoNaODvA9",
       "id": 8
     },
     {
-      "title": "Learn NextJS Advance",
+      "title": "Learn NextJs",
       "status": false,
       "remove": false,
-      "uid": "ohq60MnrvzWe3aNwLgfPW",
+      "uid": "7Sc4T0XGvy_4SVvggvcTg",
       "id": 9
     }
   ]
