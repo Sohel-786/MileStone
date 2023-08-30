@@ -4,11 +4,11 @@ import { TodoContext } from '../Contexts/TodoContexts';
 
 function TodoList(){
 
-    const { todoList } = useContext(TodoContext);
+    const { todoContextvalues } = useContext(TodoContext);
 
     return(
         <>
-            {todoList && todoList.map((el, i) =>{
+            {todoContextvalues.todoList && todoContextvalues.todoList.map((el, i) =>{
                return <Card key={el.uid} todo={el} i={i + 1}/>
             })}
         </>

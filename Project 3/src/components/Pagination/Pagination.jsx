@@ -4,13 +4,13 @@ import './pagination.css'
 
 function Pagination(){
 
-    const { handlePageDecrease, handlePageIncrease, page, todoList, limit } = useContext(TodoContext);
+    const { handlePageDecrease, handlePageIncrease, todoContextvalues } = useContext(TodoContext);
 
     return(
     
         <footer>
-            <button disabled={ page === 1 ? true : false } className="button-78" onClick={handlePageDecrease}>Prev</button>
-            <button disabled={ limit === 0 ? true : todoList.length < 6 ? true : false } className="button-78" onClick={handlePageIncrease}>Next</button>
+            <button disabled={ todoContextvalues.page === 1 ? true : false } className="button-78" onClick={handlePageDecrease}>Prev</button>
+            <button disabled={ todoContextvalues.limit === 0 ? true : todoContextvalues.todoList.length < 6 ? true : false } className="button-78" onClick={handlePageIncrease}>Next</button>
         </footer>
         
     )

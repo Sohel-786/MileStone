@@ -30,23 +30,23 @@
     },
     {
       "title": "Learn Vue",
-      "status": false,
+      "status": true,
       "remove": false,
       "uid": "3lUZ2lyF6QWO8Mw7ITLwd",
       "id": 7
     },
     {
-      "title": "Learn NextJs",
+      "title": "Learn HTML,CSS",
       "status": false,
       "remove": false,
-      "uid": "G1Be0u4b8vc0ghV-JxkF5",
+      "uid": "owNjSEnWeIUlOoNaODvA9",
       "id": 8
     },
     {
-      "title": "Learn Advance Backend",
+      "title": "Learn NextJS Advance",
       "status": false,
       "remove": false,
-      "uid": "vduIdu4oycIgWnkU8L6ZX",
+      "uid": "ohq60MnrvzWe3aNwLgfPW",
       "id": 9
     }
   ]
